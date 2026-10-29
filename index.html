@@ -668,6 +668,10 @@ drawPreparation=function(c,p,time){
  detailedPreparation(c,q,time);
  if(moving){const t=run.tasks[run.taskIndex],a=craftBox(m.from||'board',t),b=craftBox(m.target,t),u=ease(age/.65),x=(a.x+a.w/2)*(1-u)+(b.x+b.w/2)*u,y=(a.y+a.h/2)*(1-u)+(b.y+b.h/2)*u-Math.sin(u*Math.PI)*90;c.save();ellipse(c,x,y+75,50,12,'#30453520');c.translate(x,y);c.rotate(Math.sin(u*Math.PI)*.13);if(m.kind==='collect'){for(let j=0;j<4;j++)sliceShape(c,m.food,-38+j*24,j%2*12,.8,j*.12)}else drawCraftFood(c,m.before.vessels[m.from],q,0,0,.65);c.restore()}
 };
+</script>
+<link rel="stylesheet" href="cooking-studio.css?v=1">
+<script src="cooking-studio.js?v=1"></script>
+<script>
 if(!window.__GAME_TEST__)launchAdventure();
 
 </script>
